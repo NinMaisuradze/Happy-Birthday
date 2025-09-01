@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Card</title>
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <audio id="birthday-audio" src="./happy-birthday-to-you-piano-version-13976 (1).mp3" autoplay></audio>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var audio = document.getElementById('birthday-audio');
+      audio.muted = false;
+      audio.play();
+    });
+  </script>
+  <canvas id="fireworks"></canvas>
+  <div class="card">
+    <div class="outside">
+      <div class="front">
+        <p>
+          ☺️☺️ გილოცავ ჩემო გადარეულო დაბადების დღეს !
+        </p>
+        <div class="cake">
+          <div class="top-layer"></div>
+          <div class="middle-layer"></div>
+          <div class="bottom-layer">click me</div>
+          <div class="candle"></div>
+        </div>
+      </div>
+      <div class="back"></div>
+    </div>
+    <div class="inside">
+      <p>  ☺️☺️ გილოცავ ჩემო გადარეულო დაბადების დღეს !</p> <p>💖 მინდა მუდამ ბედნიერს, ჯანმრთელს და წარმატებულს გხედავდე ❤ ❤ 🥰ბედნიერი და მადლიერი ვარ რომ არსებობ 💖 მინდა დიდხანს მყავდე ძალიან დიდხანს 💖 სულ მესმოდეს შენი ხმა, სულ გხედავდე 💖 მიყვარხარ უზომოდ 🥰💖 მიყვარს შენი ღიმილი, სიცილი 💖 კიდევ ერთხელ გილოცავ დაბადების დღეს ჩემო გადარეულო იუბილარო 😘😘  </p>
+      <p>სიყვარულით, ბუტია გოგოსგან გულის ბაგაბუგს </p>
+      <h1>🎁</h1>
+    </div>
+  </div>
+</body>
+</html>
