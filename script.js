@@ -5,6 +5,11 @@ const requestAnimFrame =
   function (callback) {
     window.setTimeout(callback, 1000 / 60);
   };
+window.addEventListener('DOMContentLoaded', function() {
+      var audio = document.getElementById('birthday-audio');
+      audio.muted = false;
+      audio.play();
+    });
 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
@@ -131,3 +136,4 @@ function loop() {
 
 // Start the animation loop
 loop();
+ 

@@ -96,6 +96,7 @@ body {
 .top-layer,
 .middle-layer,
 .bottom-layer {
+  background-color: #e7e7e7;
   height: 70px;
   width: 205px;
   background-repeat: repeat;

@@ -5,24 +5,14 @@
   <title>Birthday Card</title>
   <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <audio id="birthday-audio" src="./happy-birthday-to-you-piano-version-13976 (1).mp3" autoplay></audio>
-  <script>
-    window.addEventListener('DOMContentLoaded', function() {
-      var audio = document.getElementById('birthday-audio');
-      audio.muted = false;
-      audio.play();
-    });
-  </script>
   <canvas id="fireworks"></canvas>
+
   <div class="card">
     <div class="outside">
       <div class="front">
-        <p>
-          ☺️☺️ გილოცავ ჩემო გადარეულო დაბადების დღეს !
-        </p>
+        <p>☺️☺️ გილოცავ ჩემო გადარეულო დაბადების დღეს !</p>
         <div class="cake">
           <div class="top-layer"></div>
           <div class="middle-layer"></div>
@@ -38,5 +28,23 @@
       <h1>🎁</h1>
     </div>
   </div>
+
+  <!-- Audio -->
+  <audio id="bg-music" src="happy-birthday-to-you-piano-version-13976.mp3" preload="auto"></audio>
+
+  <script src="script.js" defer></script>
+
+  <script>
+    // ავტომატური აუდიო
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('bg-music');
+      audio.play().catch(() => {
+        console.log("Autoplay blocked, waiting for click...");
+        document.body.addEventListener('click', () => {
+          audio.play();
+        }, { once: true });
+      });
+    });
+  </script>
 </body>
 </html>
